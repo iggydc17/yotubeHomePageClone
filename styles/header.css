@@ -1,0 +1,241 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    height: 56px;
+    background-color: white;
+    border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+.header img {
+    width: 26px;
+}
+
+.header img:hover {
+    cursor: pointer;
+}
+
+.left-section,
+.middle-section,
+.right-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.left-section {
+    padding-left: 16px;
+    padding-right: 26px;
+}
+
+.hamburger-menu-icon {
+    padding: 8px;
+}
+
+.hamburger-menu-icon:hover {
+    background-color: rgb(236, 236, 236);
+    border-radius: 50%;
+}
+
+.hamburger-menu-icon:active {
+    background-color: rgb(224, 224, 224);
+}
+
+.youtube-logo {
+    width: 145px !important;
+    height: 24px !important;
+}
+
+.middle-section {
+    flex: 1;
+    max-width: 700px;
+    margin-right: 28px;
+}
+
+.middle-section input {
+    flex: 1;
+    width: 600px;
+    height: 40px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 30px 2px 2px 30px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+    padding-left: 16px;
+    font-size: 18px;
+    width: 0;
+}
+
+.middle-section input::placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.middle-section input:focus {
+    border: 1px solid blue;
+    outline: none;
+}
+
+.search-button,
+.voice-search-button,
+.upload-icon-container,
+.youtube-apps-icon-container,
+.profile-pic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.tooltip {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-button {
+    height: 42px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 0px 30px 30px 0px;
+    padding: 12px 22px;
+    margin-left: -1px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 24px;
+
+    position: relative;
+}
+
+.search-button div,
+.voice-search-button div,
+.upload-icon-container .tooltip,
+.youtube-apps-icon-container .tooltip,
+.container .tooltip {
+    position: absolute;
+    bottom: -60px;
+    background-color: rgb(104, 104, 104);
+    width: 200px;
+    border-radius: 4px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 8px 12px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+    text-align: center;
+    width: auto;
+}
+
+.upload-icon-container .tooltip,
+.youtube-apps-icon-container .tooltip,
+.notifications-icon-container .tooltip {
+    bottom: -70px;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.youtube-apps-icon-container:hover .tooltip,
+.notifications-icon-container:hover .tooltip,
+.container:hover .tooltip {
+    opacity: 1;
+}
+
+.search-icon {
+    height: 26px;
+}
+
+.voice-search-button {
+    height: 40px;
+    width: 42px;
+    background-color:rgb(240, 240, 240);
+    border: none;
+    border-radius: 20px;
+    margin-left: -10px;
+}
+
+.voice-search-button:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+.voice-search-button:active {
+    background-color:  rgb(224, 224, 224);
+}
+
+.voice-search-icon {
+    height: 26px;
+}
+
+.right-section {
+    justify-content: space-between;
+    margin-right: 42px;
+    width: 200px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.right-section div:not(.notification-number) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+.right-section .container {
+    padding: 8px;
+}
+
+.right-section .container:hover {
+    background-color: rgb(236, 236, 236);
+    border-radius: 50%;
+}
+
+.right-section .container:active {
+background-color:  rgb(224, 224, 224);
+}
+
+.notifications-icon-container {
+    position: relative;
+}
+
+.notification-number {
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    background-color: rgb(200, 0, 0);
+    color: white;
+    font-family: Roboto, Arial;
+    font-size: 11px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px;}
+
+.profile-pic {
+    width: 32px !important;
+    height: 32px !important;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-left: 12px;
+}
+
+.profile-pic:hover {
+    cursor: pointer;
+}
+
+.profile-pic:active {
+    border: 1px solid dodgerblue;
+}
